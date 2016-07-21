@@ -1,6 +1,6 @@
 //
-//  SPCircleProgressView.h
-//  UploadImage
+//  SPProgressView.h
+//  SPProgressView
 //
 //  Created by 康世朋 on 16/6/7.
 //  Copyright © 2016年 SP. All rights reserved.
