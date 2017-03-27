@@ -67,7 +67,7 @@
             
             break;
         case SPProgressStyleCircle:
-            _trackPath = [UIBezierPath bezierPathWithArcCenter:self.center radius:(S_WIDTH - _progressHeight)/ 2 startAngle:0 endAngle:M_PI * 2 clockwise:YES];;
+            _trackPath = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.frame.size.width/2, self.frame.size.height/2) radius:(S_WIDTH - _progressHeight)/ 2 startAngle:0 endAngle:M_PI * 2 clockwise:YES];;
             break;
         default:
             break;
@@ -88,7 +88,7 @@
             _progressPath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(_progress, 0, S_WIDTH-_progress*2, _progressHeight) cornerRadius:0];
             break;
         case SPProgressStyleCircle:
-            _progressPath = [UIBezierPath bezierPathWithArcCenter:self.center radius:(S_WIDTH - _progressHeight)/ 2 startAngle:- M_PI_2 endAngle:(M_PI * 2) * _progress - M_PI_2 clockwise:YES];
+            _progressPath = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.frame.size.width/2, self.frame.size.height/2) radius:(S_WIDTH - _progressHeight)/ 2 startAngle:- M_PI_2 endAngle:(M_PI * 2) * _progress - M_PI_2 clockwise:YES];
             break;
         default:
             break;
@@ -220,7 +220,7 @@
 }
 
 - (void)changeProgress {
-    _progressPath = [UIBezierPath bezierPathWithArcCenter:self.center radius:(self.bounds.size.width - _progressHeight)/ 2 startAngle:angle endAngle:(M_PI/2*3)+angle clockwise:YES];
+    _progressPath = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.frame.size.width/2, self.frame.size.height/2) radius:(self.bounds.size.width - _progressHeight)/ 2 startAngle:angle endAngle:(M_PI/2*3)+angle clockwise:YES];
     _progressLayer.path = _progressPath.CGPath;
     angle += (M_PI/90);
     if (angle >= M_PI*2) {

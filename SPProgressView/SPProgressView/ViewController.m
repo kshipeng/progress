@@ -31,7 +31,7 @@
     pro.progress = 0.2; //设置进度
     pro.progressHeight = 6;//设置进度条宽度
     pro.progressStyle = SPProgressStyleCircle;//设置样式
-    //pro.repeats = YES;//旋转效果，若开启请把下面的timer注释掉
+    pro.repeats = NO;//旋转效果，若开启请把下面的timer注释掉
     [self.view addSubview:pro];
     timer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(changeProgress) userInfo:nil repeats:YES];
 }
